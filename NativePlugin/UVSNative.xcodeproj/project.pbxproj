@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07BFA39E2109F2AC002BF6CC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFA39D2109F270002BF6CC /* OpenGL.framework */; };
+		07BFA39F2109F2B9002BF6CC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFA39C2109F270002BF6CC /* CoreFoundation.framework */; };
+		07F5CFCA2170A63500ED9322 /* API_SyphonMetal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07F5CFB92170A63500ED9322 /* API_SyphonMetal.mm */; };
+		07F5CFCB2170A63500ED9322 /* API_SyphonGLCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07F5CFBA2170A63500ED9322 /* API_SyphonGLCore.mm */; };
+		07F5CFCC2170A63500ED9322 /* Plugin.def in Resources */ = {isa = PBXBuildFile; fileRef = 07F5CFBB2170A63500ED9322 /* Plugin.def */; };
+		07F5CFCD2170A63500ED9322 /* Plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07F5CFBC2170A63500ED9322 /* Plugin.cpp */; };
+		5606512B209218B700475654 /* UnityLogger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5606512A209218B700475654 /* UnityLogger.mm */; };
+		5606512E209229A900475654 /* SyphonGLCore_UnityWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5606512D209229A900475654 /* SyphonGLCore_UnityWrapper.mm */; };
+		567A3D6620920A8B00037667 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567A3D6520920A8700037667 /* IOSurface.framework */; };
+		567A3D6920920B5D00037667 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567A3D6820920B5A00037667 /* Cocoa.framework */; };
+		56C176DF209A11D0002D91CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C176DE209A11CB002D91CE /* QuartzCore.framework */; };
+		840BAD3E2183067900CD6544 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840BAD3D2183067800CD6544 /* Security.framework */; };
+		841156D221CA40F900780B07 /* NdiSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841156D021CA40F900780B07 /* NdiSender.cpp */; };
+		841156DD21CA5E2800780B07 /* SyphonMetal_UnityWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 841156DC21CA5E2800780B07 /* SyphonMetal_UnityWrapper.m */; };
+		84523E5C21D3E0D300E36DB6 /* UnityLoggerCPP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84523E5B21D3E0D300E36DB6 /* UnityLoggerCPP.cpp */; };
+		845A6DD3223A42B20051FBFF /* API_Void.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845A6DD2223A42B20051FBFF /* API_Void.cpp */; };
+		845A6DD6223A53520051FBFF /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845A6DD5223A53520051FBFF /* Syphon.framework */; };
+		845A6DD8223A58120051FBFF /* libndi.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 845A6DD7223A58120051FBFF /* libndi.3.dylib */; };
+		845A6DD9223A581A0051FBFF /* libndi.3.dylib in Copy libs */ = {isa = PBXBuildFile; fileRef = 845A6DD7223A58120051FBFF /* libndi.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		845A6DDA223A58940051FBFF /* Syphon.framework in Copy libs */ = {isa = PBXBuildFile; fileRef = 845A6DD5223A53520051FBFF /* Syphon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8473A3B122312B020042D869 /* SyphonShaderForUnity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473A3A922312B010042D869 /* SyphonShaderForUnity.m */; };
+		8473A3B222312B020042D869 /* SyphonServerForUnity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473A3AA22312B010042D869 /* SyphonServerForUnity.m */; };
+		8473A3B322312B020042D869 /* SyphonIOSurfaceImageForUnity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473A3AE22312B020042D869 /* SyphonIOSurfaceImageForUnity.m */; };
+		8473A3B422312B020042D869 /* SyphonServerRendererUnity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8473A3AF22312B020042D869 /* SyphonServerRendererUnity.m */; };
+		84F0C8602192E8F700EFB8E3 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F0C85F2192E8F700EFB8E3 /* Metal.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07AE1FA9210A199400F78209 /* Copy libs */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				845A6DDA223A58940051FBFF /* Syphon.framework in Copy libs */,
+				845A6DD9223A581A0051FBFF /* libndi.3.dylib in Copy libs */,
+			);
+			name = "Copy libs";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07BFA39C2109F270002BF6CC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
+		07BFA39D2109F270002BF6CC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		07C77B9720F386670025F711 /* DebugUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugUtil.h; sourceTree = "<group>"; };
+		07F5CFB62170A63500ED9322 /* PlatformBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformBase.h; sourceTree = "<group>"; };
+		07F5CFB92170A63500ED9322 /* API_SyphonMetal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = API_SyphonMetal.mm; sourceTree = "<group>"; };
+		07F5CFBA2170A63500ED9322 /* API_SyphonGLCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = API_SyphonGLCore.mm; sourceTree = "<group>"; };
+		07F5CFBB2170A63500ED9322 /* Plugin.def */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Plugin.def; sourceTree = "<group>"; };
+		07F5CFBC2170A63500ED9322 /* Plugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plugin.cpp; sourceTree = "<group>"; };
+		07F5CFBE2170A63500ED9322 /* IUnityGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUnityGraphics.h; sourceTree = "<group>"; };
+		07F5CFBF2170A63500ED9322 /* IUnityGraphicsD3D11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUnityGraphicsD3D11.h; sourceTree = "<group>"; };
+		07F5CFC02170A63500ED9322 /* IUnityGraphicsD3D12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUnityGraphicsD3D12.h; sourceTree = "<group>"; };
+		07F5CFC12170A63500ED9322 /* IUnityGraphicsD3D9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUnityGraphicsD3D9.h; sourceTree = "<group>"; };
+		07F5CFC22170A63500ED9322 /* IUnityGraphicsMetal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUnityGraphicsMetal.h; sourceTree = "<group>"; };
+		07F5CFC32170A63500ED9322 /* IUnityInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUnityInterface.h; sourceTree = "<group>"; };
+		56065129209218B700475654 /* UnityLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityLogger.h; sourceTree = "<group>"; };
+		5606512A209218B700475654 /* UnityLogger.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UnityLogger.mm; sourceTree = "<group>"; };
+		5606512C209229A900475654 /* SyphonGLCore_UnityWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyphonGLCore_UnityWrapper.h; sourceTree = "<group>"; };
+		5606512D209229A900475654 /* SyphonGLCore_UnityWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SyphonGLCore_UnityWrapper.mm; sourceTree = "<group>"; };
+		567A3D6520920A8700037667 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		567A3D6820920B5A00037667 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		56C176DE209A11CB002D91CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		840BAD3D2183067800CD6544 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8411569F21C1070C00780B07 /* API_SyphonMetal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_SyphonMetal.h; sourceTree = "<group>"; };
+		841156A021C1185800780B07 /* API_SyphonGLCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_SyphonGLCore.h; sourceTree = "<group>"; };
+		841156AA21C16E0E00780B07 /* UnityLoggerCPP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityLoggerCPP.h; sourceTree = "<group>"; };
+		841156AB21C3FF1200780B07 /* API_SyphonCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_SyphonCommon.h; sourceTree = "<group>"; };
+		841156C721C8FE1200780B07 /* NdiSender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NdiSender.h; sourceTree = "<group>"; };
+		841156D021CA40F900780B07 /* NdiSender.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NdiSender.cpp; sourceTree = "<group>"; };
+		841156DB21CA5E2800780B07 /* SyphonMetal_UnityWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyphonMetal_UnityWrapper.h; sourceTree = "<group>"; };
+		841156DC21CA5E2800780B07 /* SyphonMetal_UnityWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyphonMetal_UnityWrapper.m; sourceTree = "<group>"; };
+		84523E5B21D3E0D300E36DB6 /* UnityLoggerCPP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UnityLoggerCPP.cpp; sourceTree = "<group>"; };
+		845A6DCF223672620051FBFF /* UnityRenderAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityRenderAPI.h; sourceTree = "<group>"; };
+		845A6DD0223675400051FBFF /* RegisteredRenderApis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredRenderApis.h; sourceTree = "<group>"; };
+		845A6DD1223A42B20051FBFF /* API_Void.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_Void.h; sourceTree = "<group>"; };
+		845A6DD2223A42B20051FBFF /* API_Void.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = API_Void.cpp; sourceTree = "<group>"; };
+		845A6DD5223A53520051FBFF /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Syphon.framework; sourceTree = "<group>"; };
+		845A6DD7223A58120051FBFF /* libndi.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libndi.3.dylib; path = "NewTek NDI SDK/lib/osx/x64/libndi.3.dylib"; sourceTree = "<group>"; };
+		8473A3A922312B010042D869 /* SyphonShaderForUnity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyphonShaderForUnity.m; sourceTree = "<group>"; };
+		8473A3AA22312B010042D869 /* SyphonServerForUnity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyphonServerForUnity.m; sourceTree = "<group>"; };
+		8473A3AB22312B010042D869 /* SyphonShaderForUnity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyphonShaderForUnity.h; sourceTree = "<group>"; };
+		8473A3AC22312B010042D869 /* SyphonServerRendererUnity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyphonServerRendererUnity.h; sourceTree = "<group>"; };
+		8473A3AD22312B020042D869 /* SyphonServerForUnity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyphonServerForUnity.h; sourceTree = "<group>"; };
+		8473A3AE22312B020042D869 /* SyphonIOSurfaceImageForUnity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyphonIOSurfaceImageForUnity.m; sourceTree = "<group>"; };
+		8473A3AF22312B020042D869 /* SyphonServerRendererUnity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyphonServerRendererUnity.m; sourceTree = "<group>"; };
+		8473A3B022312B020042D869 /* SyphonIOSurfaceImageForUnity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyphonIOSurfaceImageForUnity.h; sourceTree = "<group>"; };
+		84F0C85F2192E8F700EFB8E3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		8D576316048677EA00EA77CD /* UVSNative.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UVSNative.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D576313048677EA00EA77CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F0C8602192E8F700EFB8E3 /* Metal.framework in Frameworks */,
+				840BAD3E2183067900CD6544 /* Security.framework in Frameworks */,
+				567A3D6620920A8B00037667 /* IOSurface.framework in Frameworks */,
+				07BFA39E2109F2AC002BF6CC /* OpenGL.framework in Frameworks */,
+				567A3D6920920B5D00037667 /* Cocoa.framework in Frameworks */,
+				845A6DD8223A58120051FBFF /* libndi.3.dylib in Frameworks */,
+				07BFA39F2109F2B9002BF6CC /* CoreFoundation.framework in Frameworks */,
+				845A6DD6223A53520051FBFF /* Syphon.framework in Frameworks */,
+				56C176DF209A11D0002D91CE /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07F5CFB52170A63500ED9322 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				845A6DD0223675400051FBFF /* RegisteredRenderApis.h */,
+				841156AB21C3FF1200780B07 /* API_SyphonCommon.h */,
+				841156A021C1185800780B07 /* API_SyphonGLCore.h */,
+				07F5CFBA2170A63500ED9322 /* API_SyphonGLCore.mm */,
+				8411569F21C1070C00780B07 /* API_SyphonMetal.h */,
+				07F5CFB92170A63500ED9322 /* API_SyphonMetal.mm */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		07F5CFBD2170A63500ED9322 /* Unity */ = {
+			isa = PBXGroup;
+			children = (
+				07F5CFB62170A63500ED9322 /* PlatformBase.h */,
+				07F5CFBE2170A63500ED9322 /* IUnityGraphics.h */,
+				07F5CFBF2170A63500ED9322 /* IUnityGraphicsD3D11.h */,
+				07F5CFC02170A63500ED9322 /* IUnityGraphicsD3D12.h */,
+				07F5CFC12170A63500ED9322 /* IUnityGraphicsD3D9.h */,
+				07F5CFC22170A63500ED9322 /* IUnityGraphicsMetal.h */,
+				07F5CFC32170A63500ED9322 /* IUnityInterface.h */,
+			);
+			path = Unity;
+			sourceTree = "<group>";
+		};
+		089C166AFE841209C02AAC07 /* RenderingPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				845A6DD4223A52B60051FBFF /* FrameSender */,
+				845A6DCC2236710B0051FBFF /* Common */,
+				07F5CFB52170A63500ED9322 /* Plugin */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+				5628748220906B6400EF5ED0 /* Frameworks */,
+			);
+			name = RenderingPlugin;
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D576317048677EA00EA77CD /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D576316048677EA00EA77CD /* UVSNative.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5628748220906B6400EF5ED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F0C85F2192E8F700EFB8E3 /* Metal.framework */,
+				840BAD3D2183067800CD6544 /* Security.framework */,
+				07BFA39C2109F270002BF6CC /* CoreFoundation.framework */,
+				07BFA39D2109F270002BF6CC /* OpenGL.framework */,
+				56C176DE209A11CB002D91CE /* QuartzCore.framework */,
+				567A3D6820920B5A00037667 /* Cocoa.framework */,
+				567A3D6520920A8700037667 /* IOSurface.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		567A3D6A20920BF000037667 /* Syphon */ = {
+			isa = PBXGroup;
+			children = (
+				845A6DD5223A53520051FBFF /* Syphon.framework */,
+				8473A3B522312B0C0042D869 /* CustomServerUnityGLCore */,
+				841156DB21CA5E2800780B07 /* SyphonMetal_UnityWrapper.h */,
+				841156DC21CA5E2800780B07 /* SyphonMetal_UnityWrapper.m */,
+				5606512C209229A900475654 /* SyphonGLCore_UnityWrapper.h */,
+				5606512D209229A900475654 /* SyphonGLCore_UnityWrapper.mm */,
+			);
+			path = Syphon;
+			sourceTree = "<group>";
+		};
+		56C176DD2099F675002D91CE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				841156AA21C16E0E00780B07 /* UnityLoggerCPP.h */,
+				84523E5B21D3E0D300E36DB6 /* UnityLoggerCPP.cpp */,
+				56065129209218B700475654 /* UnityLogger.h */,
+				5606512A209218B700475654 /* UnityLogger.mm */,
+				07C77B9720F386670025F711 /* DebugUtil.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		841156C121C8FD5800780B07 /* NDI */ = {
+			isa = PBXGroup;
+			children = (
+				845A6DD7223A58120051FBFF /* libndi.3.dylib */,
+				841156C721C8FE1200780B07 /* NdiSender.h */,
+				841156D021CA40F900780B07 /* NdiSender.cpp */,
+			);
+			path = NDI;
+			sourceTree = "<group>";
+		};
+		845A6DCC2236710B0051FBFF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				07F5CFBB2170A63500ED9322 /* Plugin.def */,
+				07F5CFBC2170A63500ED9322 /* Plugin.cpp */,
+				845A6DCE223671880051FBFF /* RenderAPI */,
+				56C176DD2099F675002D91CE /* Utils */,
+				07F5CFBD2170A63500ED9322 /* Unity */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		845A6DCE223671880051FBFF /* RenderAPI */ = {
+			isa = PBXGroup;
+			children = (
+				845A6DD1223A42B20051FBFF /* API_Void.h */,
+				845A6DD2223A42B20051FBFF /* API_Void.cpp */,
+				845A6DCF223672620051FBFF /* UnityRenderAPI.h */,
+			);
+			path = RenderAPI;
+			sourceTree = "<group>";
+		};
+		845A6DD4223A52B60051FBFF /* FrameSender */ = {
+			isa = PBXGroup;
+			children = (
+				567A3D6A20920BF000037667 /* Syphon */,
+				841156C121C8FD5800780B07 /* NDI */,
+			);
+			path = FrameSender;
+			sourceTree = "<group>";
+		};
+		8473A3B522312B0C0042D869 /* CustomServerUnityGLCore */ = {
+			isa = PBXGroup;
+			children = (
+				8473A3B022312B020042D869 /* SyphonIOSurfaceImageForUnity.h */,
+				8473A3AE22312B020042D869 /* SyphonIOSurfaceImageForUnity.m */,
+				8473A3AD22312B020042D869 /* SyphonServerForUnity.h */,
+				8473A3AA22312B010042D869 /* SyphonServerForUnity.m */,
+				8473A3AC22312B010042D869 /* SyphonServerRendererUnity.h */,
+				8473A3AF22312B020042D869 /* SyphonServerRendererUnity.m */,
+				8473A3AB22312B010042D869 /* SyphonShaderForUnity.h */,
+				8473A3A922312B010042D869 /* SyphonShaderForUnity.m */,
+			);
+			path = CustomServerUnityGLCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D57630D048677EA00EA77CD /* NativePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB911A08733D790010E9CD /* Build configuration list for PBXNativeTarget "NativePlugin" */;
+			buildPhases = (
+				8D57630F048677EA00EA77CD /* Resources */,
+				8D576311048677EA00EA77CD /* Sources */,
+				8D576313048677EA00EA77CD /* Frameworks */,
+				07AE1FA9210A199400F78209 /* Copy libs */,
+				070D9A1B210B1ED2001C86F1 /* Copy Bundle to Debug Unity Project */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NativePlugin;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = RenderingPlugin;
+			productReference = 8D576316048677EA00EA77CD /* UVSNative.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+			};
+			buildConfigurationList = 1DEB911E08733D790010E9CD /* Build configuration list for PBXProject "UVSNative" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* RenderingPlugin */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D57630D048677EA00EA77CD /* NativePlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D57630F048677EA00EA77CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F5CFCC2170A63500ED9322 /* Plugin.def in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		070D9A1B210B1ED2001C86F1 /* Copy Bundle to Debug Unity Project */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Bundle to Debug Unity Project";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -rf ../DemoUnityProject/Assets/UnityVideoSender/Native\nmkdir -p ../DemoUnityProject/Assets/UnityVideoSender/Native\ncp -R ../dist/Native ../DemoUnityProject/Assets/UnityVideoSender/";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D576311048677EA00EA77CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845A6DD3223A42B20051FBFF /* API_Void.cpp in Sources */,
+				841156D221CA40F900780B07 /* NdiSender.cpp in Sources */,
+				841156DD21CA5E2800780B07 /* SyphonMetal_UnityWrapper.m in Sources */,
+				07F5CFCB2170A63500ED9322 /* API_SyphonGLCore.mm in Sources */,
+				8473A3B222312B020042D869 /* SyphonServerForUnity.m in Sources */,
+				84523E5C21D3E0D300E36DB6 /* UnityLoggerCPP.cpp in Sources */,
+				8473A3B122312B020042D869 /* SyphonShaderForUnity.m in Sources */,
+				5606512B209218B700475654 /* UnityLogger.mm in Sources */,
+				5606512E209229A900475654 /* SyphonGLCore_UnityWrapper.mm in Sources */,
+				07F5CFCD2170A63500ED9322 /* Plugin.cpp in Sources */,
+				07F5CFCA2170A63500ED9322 /* API_SyphonMetal.mm in Sources */,
+				8473A3B422312B020042D869 /* SyphonServerRendererUnity.m in Sources */,
+				8473A3B322312B020042D869 /* SyphonIOSurfaceImageForUnity.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB911B08733D790010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_CXX0X_EXTENSIONS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
+				DYLIB_INSTALL_NAME_BASE = "$(INSTALL_PATH)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/FrameSender/Syphon",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = ../dist/Native;
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/FrameSender/NDI/NewTek\\ NDI\\ SDK/lib/osx/x64",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anomes.unityvideosender;
+				PRODUCT_NAME = UVSNative;
+				SYMROOT = bin;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1DEB911C08733D790010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_CXX0X_EXTENSIONS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DYLIB_INSTALL_NAME_BASE = "$(INSTALL_PATH)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/FrameSender/Syphon",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = ../dist/Native;
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/FrameSender/NDI/NewTek\\ NDI\\ SDK/lib/osx/x64",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anomes.unityvideosender;
+				PRODUCT_NAME = UVSNative;
+				SYMROOT = bin;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		1DEB911F08733D790010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "";
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = "../../(build)";
+			};
+			name = Debug;
+		};
+		1DEB912008733D790010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "";
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				SYMROOT = "../../(build)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB911A08733D790010E9CD /* Build configuration list for PBXNativeTarget "NativePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB911B08733D790010E9CD /* Debug */,
+				1DEB911C08733D790010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB911E08733D790010E9CD /* Build configuration list for PBXProject "UVSNative" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB911F08733D790010E9CD /* Debug */,
+				1DEB912008733D790010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

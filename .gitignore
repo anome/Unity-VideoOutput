@@ -1,0 +1,9 @@
+dist
+
+# Xcode
+**/project.xcworkspace/xcuserdata/
+**/xcuserdata/
+
+
+# Visual studio
+**/.vs

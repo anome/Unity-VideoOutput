@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FrameSender">
+      <UniqueIdentifier>{c4ff25de-15b7-476f-bb98-535fb0ad10ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{a211bce7-3f25-4259-a0aa-91265bdf00e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugin">
+      <UniqueIdentifier>{33b16d99-c1e9-4175-9998-48d1fc535809}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\RenderAPI\API_Void.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Utils\UnityLoggerCPP.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Plugin.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Plugin\API_SpoutD3D11.cpp">
+      <Filter>Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FrameSender\NDI\NdiSender.cpp">
+      <Filter>FrameSender</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\RenderAPI\API_Void.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\RenderAPI\UnityRenderAPI.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Unity\IUnityGraphics.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Unity\IUnityGraphicsD3D11.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Unity\IUnityGraphicsD3D12.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Unity\IUnityGraphicsD3D9.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Unity\IUnityGraphicsMetal.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Unity\IUnityInterface.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Unity\PlatformBase.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Utils\UnityLoggerCPP.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Plugin\RegisteredRenderApis.h">
+      <Filter>Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Plugin\API_SpoutD3D11.h">
+      <Filter>Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameSender\NDI\NdiSender.h">
+      <Filter>FrameSender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameSender\Spout\SpoutData.h">
+      <Filter>FrameSender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FrameSender\Spout\SpoutSenderForUnity.h">
+      <Filter>FrameSender</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\Plugin.def">
+      <Filter>Common</Filter>
+    </None>
+  </ItemGroup>
+</Project>
