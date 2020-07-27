@@ -27,16 +27,17 @@
      SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 #import <OpenGL/OpenGL.h>
+#import <Syphon/SyphonImageBase.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /** 
  SyphonImage represents an image stored as an OpenGL texture of type GL_TEXTURE_RECTANGLE.
  */
 
-@interface SyphonImage : NSObject {
-
-}
+@interface SyphonImage : SyphonImageBase
 
 /**
  A GLuint representing the texture name. The associated texture is of type GL_TEXTURE_RECTANGLE.
@@ -48,3 +49,5 @@
  */
 @property (readonly) NSSize textureSize;
 @end
+
+NS_ASSUME_NONNULL_END

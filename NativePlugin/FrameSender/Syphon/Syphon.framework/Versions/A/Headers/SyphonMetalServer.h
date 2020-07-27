@@ -1,26 +1,26 @@
+#import "SyphonServerBase.h"
 #import <Metal/MTLPixelFormat.h>
-#import <Foundation/Foundation.h>
+#import <Metal/MTLTexture.h>
+#import <Metal/MTLCommandBuffer.h>
 
-@protocol MTLDevice;
-@protocol MTLTexture;
-@protocol MTLCommandBuffer;
+NS_ASSUME_NONNULL_BEGIN
 
-@interface SyphonMetalServer : NSObject
+@interface SyphonMetalServer : SyphonServerBase
 
-@property (readonly) BOOL hasClients;
-@property (retain) NSString* name;
-@property (readonly) NSDictionary *serverDescription;
-
-- (id)initWithName:(NSString*)serverName metalDevice:(id<MTLDevice>)metalDevice pixelFormat:(MTLPixelFormat)pixelFormat options:(NSDictionary *)options;
+- (id)initWithName:(NSString*)name device:(id<MTLDevice>)device options:(NSDictionary *)options;
 
 // API Method 1
-- (void)drawFrame:(void(^)(id<MTLTexture> texture,id<MTLCommandBuffer> commandBuffer))block size:(NSSize)size commandBuffer:(id<MTLCommandBuffer>)commandBuffer;
+- (void)drawFrame:(void(^)(id<MTLTexture> texture,id<MTLCommandBuffer> commandBuffer))frameHandler size:(NSSize)size commandBuffer:(id<MTLCommandBuffer>)commandBuffer;
 
 // API Method 2
-- (void)publishFrameTexture:(id<MTLTexture>)texture imageRegion:(NSRect)region;
-- (void)publishFrameTexture:(id<MTLTexture>)texture;
+- (void)publishFrameTexture:(id<MTLTexture>)textureToPublish imageRegion:(NSRect)region flip:(BOOL)flip;
+- (void)publishFrameTexture:(id<MTLTexture>)textureToPublish imageRegion:(NSRect)region;
+- (void)publishFrameTexture:(id<MTLTexture>)textureToPublish flip:(BOOL)flip;
+- (void)publishFrameTexture:(id<MTLTexture>)textureToPublish;
 
-- (id<MTLTexture>)newFrameTexture;
+- (id<MTLTexture>)newFrameImage;
 - (void)stop;
 
 @end
+
+NS_ASSUME_NONNULL_END

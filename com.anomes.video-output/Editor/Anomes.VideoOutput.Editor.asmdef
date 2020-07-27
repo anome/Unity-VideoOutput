@@ -1,0 +1,17 @@
+{
+    "name": "Anomes.VideoOutput.Editor",
+    "references": [
+        "GUID:f984e9e947dc04ca5bd3eea534e4eb4a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

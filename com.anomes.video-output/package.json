@@ -1,0 +1,14 @@
+{
+  "name": "com.anomes.video-output",
+  "repository": "github:anomes/Unity-VideoOutput",
+  "displayName": "Video Output",
+  "version": "2.0.0",
+  "unity": "2019.4",
+  "description": "Output camera frames to other software using Syphon/Spout/NDI.",
+  "author": {
+    "name": "Anomes",
+    "url": "https://github.com/anomes"
+  },
+  "dependencies": {},
+  "hideInEditor": false
+}

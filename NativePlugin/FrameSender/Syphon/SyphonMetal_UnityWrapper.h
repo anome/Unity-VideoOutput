@@ -8,8 +8,7 @@
 
 @property (readonly) id <MTLTexture> textureToSend;
 
-- (id)initWithServerName:(NSString*)serverName textureSize:(NSSize)size pixelFormat:(MTLPixelFormat)format device:(id <MTLDevice>)device;
-- (id)initWithTextureSize:(NSSize)size pixelFormat:(MTLPixelFormat)format device:(id <MTLDevice>)device;
+- (id)initWithServerName:(NSString*)serverName textureSize:(NSSize)size device:(id <MTLDevice>)device srgb:(BOOL)srgb;
 - (void)publishNewFrame;
 - (void)shutdown;
 

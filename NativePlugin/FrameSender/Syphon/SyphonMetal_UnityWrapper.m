@@ -1,5 +1,5 @@
 #import "SyphonMetal_UnityWrapper.h"
-#import <Syphon/SyphonMetalServer.h>
+#import "SyphonMetalServerWithExtras.h"
 #import <Metal/Metal.h>
 #import <Metal/MTLDevice.h>
 #import <Metal/MTLTexture.h>
@@ -8,20 +8,20 @@
 
 @implementation SyphonMetal_UnityWrapper
 {
-    SyphonMetalServer *syphonServer;
+    SyphonMetalServerWithExtras *syphonServer;
     NSString *serverName;
     id <MTLDevice> device;
-    MTLPixelFormat colorPixelFormat;
+    BOOL srgb;
     id <MTLCommandQueue> commandQueue;
     OSSpinLock threadLocker;
 }
 
-- (id)initWithServerName:(NSString*)theServerName textureSize:(NSSize)size pixelFormat:(MTLPixelFormat)format device:(id <MTLDevice>)theDevice
+- (id)initWithServerName:(NSString*)theServerName textureSize:(NSSize)size device:(id <MTLDevice>)theDevice srgb:(BOOL)theSrgb;
 {
     if( self = [super init] )
     {
         device = theDevice;
-        colorPixelFormat = format;
+        srgb = theSrgb;
         commandQueue = [device newCommandQueue];
         syphonServer = nil;
         serverName = theServerName;
@@ -30,13 +30,9 @@
     return self;
 }
 
-- (id)initWithTextureSize:(NSSize)size pixelFormat:(MTLPixelFormat)format device:(id <MTLDevice>)theDevice
-{
-    return [self initWithServerName:@"UnityMetalSyphon" textureSize:size pixelFormat:format device:theDevice];
-}
-
 - (void)setupTextureToSend:(NSSize)size
 {
+    MTLPixelFormat colorPixelFormat = srgb ? MTLPixelFormatBGRA8Unorm_sRGB : MTLPixelFormatBGRA8Unorm;
     MTLTextureDescriptor *desc = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:colorPixelFormat
                                                                                     width:size.width
                                                                                    height:size.height
@@ -49,7 +45,7 @@
     if( syphonServer == nil )
     {
         NSDictionary *options = @{@"SyphonServerOptionIsPrivate":@"NO"};
-        syphonServer = [[SyphonMetalServer alloc] initWithName:serverName metalDevice:device pixelFormat:colorPixelFormat options:options];
+        syphonServer = [[SyphonMetalServerWithExtras alloc] initWithName:serverName device:device options:options srgb:srgb];
     }
 }
 

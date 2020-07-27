@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\Plugin.cpp" />
+    <ClCompile Include="..\Common\RenderAPI\API_Void.cpp" />
+    <ClCompile Include="..\Common\Utils\UnityLoggerCPP.cpp" />
+    <ClCompile Include="..\FrameSender\NDI\NdiSender.cpp" />
+    <ClCompile Include="..\Plugin\API_SpoutD3D11.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\RenderAPI\API_Void.h" />
+    <ClInclude Include="..\Common\RenderAPI\UnityRenderAPI.h" />
+    <ClInclude Include="..\Common\Unity\IUnityGraphics.h" />
+    <ClInclude Include="..\Common\Unity\IUnityGraphicsD3D11.h" />
+    <ClInclude Include="..\Common\Unity\IUnityGraphicsD3D12.h" />
+    <ClInclude Include="..\Common\Unity\IUnityGraphicsD3D9.h" />
+    <ClInclude Include="..\Common\Unity\IUnityGraphicsMetal.h" />
+    <ClInclude Include="..\Common\Unity\IUnityInterface.h" />
+    <ClInclude Include="..\Common\Unity\PlatformBase.h" />
+    <ClInclude Include="..\Common\Utils\UnityLoggerCPP.h" />
+    <ClInclude Include="..\FrameSender\NDI\NdiSender.h" />
+    <ClInclude Include="..\FrameSender\Spout\SpoutData.h" />
+    <ClInclude Include="..\FrameSender\Spout\SpoutSenderForUnity.h" />
+    <ClInclude Include="..\Plugin\API_SpoutD3D11.h" />
+    <ClInclude Include="..\Plugin\RegisteredRenderApis.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Common\Plugin.def" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F7CFEF5A-54BD-42E8-A59E-54ABAEB4EA9C}</ProjectGuid>
+    <RootNamespace>UVONative</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>UVONative</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\bin\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\..\build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\..\build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;UVONative_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;Processing.NDI.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ModuleDefinitionFile>../Common\Plugin.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>SETLOCAL
+
+if "$(PlatformShortName)" == "x86" (
+  set TARGET_PLUGIN_PATH=$(SolutionDir)..\bin
+) else (
+  set TARGET_PLUGIN_PATH=$(SolutionDir)..\bin
+)
+echo Target Plugin Path is %TARGET_PLUGIN_PATH%
+copy /Y "$(TargetPath)" "%TARGET_PLUGIN_PATH%\$(TargetFileName)"
+
+ENDLOCAL
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;UVONative_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\FrameSender\NDI\NewTek NDI SDK\include\win;..\FrameSender\Spout\Spout_SDK\include\;..\FrameSender\NDI;..\FrameSender\Spout;..\Common\Utils;..\Common\Unity;..\Plugin;..\Common\RenderAPI</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;Processing.NDI.Lib.x64.lib;Spout.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>../Common/Plugin.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>..\FrameSender\Spout\Spout_SDK\lib\x64;..\FrameSender\NDI\NewTek NDI SDK\lib\win\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>SETLOCAL
+
+if "$(PlatformShortName)" == "x86" (
+  set TARGET_PLUGIN_PATH=$(SolutionDir)..\bin\x86
+) else (
+  set TARGET_PLUGIN_PATH=$(SolutionDir)..\bin\x64
+)
+
+set UNITY_PROJECT_PATH=$(SolutionDir)..\..\DemoUnityProject\Assets\UnityVideoSender\Native\win_$(PlatformShortName)
+set DIST_PATH=$(SolutionDir)..\..\dist\Native\
+
+echo Target Plugin Path is %TARGET_PLUGIN_PATH%
+echo Unity Project Path is %UNITY_PROJECT_PATH%
+echo Dist Path is %DIST_PATH%
+
+echo CLEAN DIST FOLDERS
+rd /S /Q "%UNITY_PROJECT_PATH%"
+rd /S /Q %DIST_PATH%"
+
+echo CREATE BUILD FOLDERS IF NOT EXIST
+if not exist "%UNITY_PROJECT_PATH%" mkdir  "%UNITY_PROJECT_PATH%"
+if not exist "%DIST_PATH%" mkdir  "%DIST_PATH%"
+
+echo COPY TARGET FILES
+copy /Y "$(TargetPath)" "%TARGET_PLUGIN_PATH%\$(TargetFileName)"
+
+echo COPY TO DIST FOLDER
+copy /Y "%TARGET_PLUGIN_PATH%\$(TargetFileName)" "%DIST_PATH%"
+copy /Y  "$(SolutionDir)..\FrameSender\NDI\NewTek NDI SDK\lib\win\x64\*.dll" "%DIST_PATH%"
+copy /Y  "$(SolutionDir)..\FrameSender\Spout\Spout_SDK\lib\x64\*.dll" "%DIST_PATH%"
+
+echo COPY TO UNITY PROJECT
+copy /Y  "$(SolutionDir)..\FrameSender\NDI\NewTek NDI SDK\lib\win\x64\*.dll" "%UNITY_PROJECT_PATH%"
+copy /Y  "$(SolutionDir)..\FrameSender\Spout\Spout_SDK\lib\x64\*.dll" "%UNITY_PROJECT_PATH%"
+copy /Y "%TARGET_PLUGIN_PATH%\$(TargetFileName)" "%UNITY_PROJECT_PATH%"
+
+
+
+ENDLOCAL
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;NDEBUG;_WINDOWS;_USRDLL;UVONative_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ModuleDefinitionFile>../Common/Plugin.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>SETLOCAL
+
+if "$(PlatformShortName)" == "x86" (
+  set TARGET_PLUGIN_PATH=$(SolutionDir)..\bin
+) else (
+  set TARGET_PLUGIN_PATH=$(SolutionDir)..\bin
+)
+echo Target Plugin Path is %TARGET_PLUGIN_PATH%
+copy /Y "$(TargetPath)" "%TARGET_PLUGIN_PATH%\$(TargetFileName)"
+
+ENDLOCAL
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>GLEW_STATIC;WIN32;NDEBUG;_WINDOWS;_USRDLL;UVONative_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;Processing.NDI.Lib.x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ModuleDefinitionFile>../Common/Plugin.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>SETLOCAL
+
+if "$(PlatformShortName)" == "x86" (
+  set TARGET_PLUGIN_PATH=$(SolutionDir)..\bin
+) else (
+  set TARGET_PLUGIN_PATH=$(SolutionDir)..\bin
+)
+echo Target Plugin Path is %TARGET_PLUGIN_PATH%
+copy /Y "$(TargetPath)" "%TARGET_PLUGIN_PATH%\$(TargetFileName)"
+
+ENDLOCAL
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

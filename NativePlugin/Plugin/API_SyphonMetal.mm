@@ -86,8 +86,13 @@ static MTLPixelFormat metalPixelFormat = MTLPixelFormatBGRA8Unorm;
 
 extern "C" void UNITY_INTERFACE_EXPORT *SyphonMetalCreateServer(const char* serverName, int width, int height, int gammaColorSpace)
 {
-    MTLPixelFormat pixelFormat = gammaColorSpace ? MTLPixelFormatBGRA8Unorm : MTLPixelFormatBGRA8Unorm_sRGB;
-    server = [[SyphonMetal_UnityWrapper alloc] initWithServerName:[NSString stringWithUTF8String:serverName] textureSize:NSMakeSize(width, height) pixelFormat:pixelFormat device:metalDevice];
+    // Safe kill
+    if(server != nil)
+    {
+        [server shutdown];
+        server = nil;
+    }
+    server = [[SyphonMetal_UnityWrapper alloc] initWithServerName:[NSString stringWithUTF8String:serverName] textureSize:NSMakeSize(width, height) device:metalDevice srgb:!gammaColorSpace];
     return server.textureToSend;
 }
 

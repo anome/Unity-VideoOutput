@@ -1,0 +1,21 @@
+{
+    "name": "Anomes.VideoOutput.Runtime",
+    "references": [
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95" 
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.render-pipelines.core",
+            "expression": "7.3.1",
+            "define": "UVO_ASMDEF_HAS_CORE_SRP"
+        }
+    ],
+    "noEngineReferences": false
+}
